@@ -1,0 +1,16 @@
+<!--miniprogram/pages/sort/sort.wxml-->
+<block wx:if="{{list.length}}">
+<view class='speechInfo'  wx:for="{{list}}" wx:key="names">
+  <view class='infoList'>
+    <view class='listTitle'>
+      第
+      <view class=".number">{{index+1}}</view>
+      名
+    </view>
+    <view class='listContent'>
+      {{item.direction}}-{{item.names}}
+    </view>
+    <view class="sort">{{item.score}}</view>
+  </view>
+</view>
+</block>

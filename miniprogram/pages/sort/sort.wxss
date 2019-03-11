@@ -1,0 +1,38 @@
+/* miniprogram/pages/list/list.wxss */
+.speechInfo{
+  width: 702rpx;
+  height: 90rpx;
+  box-sizing: border-box;
+  border-radius: 5rpx;
+  box-shadow: 0 0 30rpx 10rpx rgba(26, 173, 240, 0.17);
+  margin: 35rpx  auto;
+}
+.infoList{
+  display: flex;
+  justify-content: space-between;
+  line-height: 90rpx;
+}
+.listTitle{
+  display: inline;
+  font-size: 24rpx;
+  font-weight: bold;
+  color:#999999;
+  padding-left: 29rpx;
+}
+.number{
+   display: inline;
+  color:#75d77c;
+}
+.listContent{
+  display: inline;
+  font-size: 24rpx;
+  font-weight: bold;
+  color:#999999;
+}
+.sort{
+  display: inline;
+  width: 91rpx;
+  height: 24rpx;
+  color: #59beff;
+  font-size: 24rpx;
+}

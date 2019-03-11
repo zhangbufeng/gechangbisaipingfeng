@@ -1,0 +1,43 @@
+<!--miniprogram/pages/score/score.wxml-->
+<block wx:if="{{person}}">
+<view class='speechInfo'>
+  <view class='infoList'>
+    <view class='listTitle'>选演讲人:</view>
+    <view class='listContent'>
+      {{person.names}}
+    </view>
+  </view>
+  <view class='infoList'>
+    <view class='listTitle'>演讲题目:</view>
+    <view class='listContent'>{{person.title}}</view>
+  </view>
+  <view class='infoList'>
+    <view class='listTitle'>所学方向:</view>
+    <view class='listContent'>{{person.direction}}</view>
+  </view>
+  <view class='infoList'>
+    <view class='listTitle'>所在班级:</view>
+    <view class='listContent'>{{person.classes}}</view>
+  </view>
+</view>
+</block>
+<block wx:if="{{list.length}}">
+<view class="scoreIntro {{pitem._id==currentIndex?'scoreIntro1':''}}" wx:for="{{list}}" wx:for-index="pindex" wx:for-item="pitem" wx:key="{{pitem._id}}" data-id="{{pitem._id}}" bindtap="opendown">
+  <view class="scoreList">{{pitem.title}}（{{pitem.total}}/{{pitem.score}}）
+    <view class="scoreOne"  wx:for="{{pitem.son}}" wx:for-index="sindex" wx:for-item="sitem" wx:key="{{sitem._id}}">
+      <view class="scoreBox">
+        <view class="listIntro">{{sitem.title}}</view>
+        <view class="scoreTatol">+{{sitem.total}}</view>
+      </view>
+      <view class="star">
+        <image src='../../images/star.png' wx:for="{{sitem.total}}" wx:key="{{index}}" data-score="{{index}}"  data-index1="{{pindex}}" data-index2="{{sindex}}" catchtap="setScore"></image>
+        <image src='../../images/star1.png' wx:for="{{sitem.score-sitem.total}}" wx:key="{{index}}" data-score="{{sitem.total+index}}" data-index1="{{pindex}}" data-index2="{{sindex}}" catchtap="setScore"></image>
+      </view>
+    </view>
+  </view>
+  <view class="arrow1">
+    ﹀
+  </view>
+</view>
+</block>
+<button class='submit' bindtap="submit">提交</button>

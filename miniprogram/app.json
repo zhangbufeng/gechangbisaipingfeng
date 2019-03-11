@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/sort/sort",
+    "pages/score/score",
+    "pages/record/record"
+  ],
+  "cloud": true,
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "唱歌程序",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#4c4c4c",
+    "selectedColor": "24aeff",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home1.png"
+      },
+      {
+        "pagePath": "pages/sort/sort",
+        "text": "名次",
+        "iconPath": "images/mingci.png",
+        "selectedIconPath": "images/mingci1.png"
+      },
+      {
+        "pagePath": "pages/record/record",
+        "text": "纪录",
+        "iconPath": "images/jilu.png",
+        "selectedIconPath": "images/jilu1.png"
+      }
+    ]
+  },
+  "debug": true,
+  "navigateToMiniProgramAppIdList": [
+    "pages/index/index"
+  ]
+}

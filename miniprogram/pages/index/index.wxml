@@ -1,0 +1,69 @@
+<view class='speechInfo'>
+  <view class='infoList'>
+    <view class='listTitle'>选演讲人:</view>
+    <view class='listContent'>
+      <picker range="{{list}}" range-key='names' value='{{index}}' bindchange='setIndex'>
+        <view>{{list[index].names}}</view>
+        <view class="arrow">
+          ﹀
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class='infoList'>
+    <view class='listTitle'>演讲题目:</view>
+    <view class='listContent'>{{list[index].title}}</view>
+  </view>
+  <view class='infoList'>
+    <view class='listTitle'>所学方向:</view>
+    <view class='listContent'>{{list[index].direction}}</view>
+  </view>
+  <view class='infoList'>
+    <view class='listTitle'>所在班级:</view>
+    <view class='listContent'>{{list[index].classes}}</view>
+  </view>
+</view>
+
+<view class='speechIntro'>
+  <view class='introList'>
+    <view class='introTitle'>评分方式:</view>
+    <view class='introContent'>星级评分</view>
+  </view>
+  <view class='introList'>
+    <view class='introTitle'>评分介绍:</view>
+    <view class='introContent introContent1'>
+      <view class='starBox'>
+        <view class='star'>
+          <image src='../../images/star.png'></image>
+          <image src='../../images/star.png'></image>
+          <image src='../../images/star.png'></image>
+          <image src='../../images/star.png'></image>
+          <image src='../../images/star1.png'></image>
+        </view>
+        <view class='starText'>一星一分</view>
+      </view>
+       <view class='starBox'>
+        <view class='star'>
+          <image src='../../images/star.png'></image>
+          <image src='../../images/star.png'></image>
+          <image src='../../images/star.png'></image>
+          <image src='../../images/star.png'></image>
+          <image src='../../images/star1.png'></image>
+        </view>
+        <view class='starText'>一星最低</view>
+      </view>
+    </view>
+  </view>
+  <view class='introList'>
+    <view class='introTitle'>评分方向:</view>
+    <view class='introContent'>
+      <view class='introItem'>整体印象(15分)</view>
+      <view class='introItem'>整体印象(15分)</view>
+      <view class='introItem'>整体印象(15分)</view>
+      <view class='introItem'>整体印象(15分)</view>
+      <view class='introItem'>整体印象(15分)</view>
+    </view>
+  </view>
+</view>
+
+<button class='submit' bindtap="goscore">去评分</button>

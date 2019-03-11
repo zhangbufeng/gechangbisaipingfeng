@@ -1,0 +1,26 @@
+<!--miniprogram/pages/record/record.wxml-->
+<block wx:if="{{list.length}}">
+<view class="speechInfo" wx:for="{{list}}" wx:key="names">
+  <view class='infoList'>
+    <view class='listTitle'>选演讲人:</view>
+    <view class='listContent'>{{item.names}}
+    </view>
+  </view>
+  <view class='infoList'>
+    <view class='listTitle'>演讲题目:</view>
+    <view class='listContent'>{{item.title}}</view>
+  </view>
+  <view class='infoList'>
+    <view class='listTitle'>所在班级:</view>
+    <view class='listContent'>{{item.classes}}</view>
+  </view>
+  <view class='infoList'>
+    <view class='listTitle'>所在方向:</view>
+    <view class='listContent'>{{item.direction}}</view>
+  </view>
+  <view class="infoList1">
+    <view class='listTitle1'>比赛成绩</view>
+    <view class='listContent1'>{{item.score}}</view>
+  </view>
+</view>
+</block>
